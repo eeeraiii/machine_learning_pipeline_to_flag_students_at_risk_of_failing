@@ -1,0 +1,15 @@
+data:
+  db_path: "/Users/elimatthewordonez/Dropbox/OTHERS/Data Analytics Training/Personal Projects/GA Technical Assessment Simulation/data/score.db"
+  raw_csv: "score.csv"
+  cleaned_csv: "score_cleaned.csv"
+
+columns:
+  drop: ["index", "age", "bag_color", "student_id", "mode_of_transport"]
+  categorical: ["gender", "learning_style", "direct_admission", "CCA", "tuition"]
+
+model:
+  type: "LogisticRegression"
+  params:
+    solver: "lbfgs"
+    max_iter: 2000 
+    random_state: 42
