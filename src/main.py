@@ -1,7 +1,7 @@
 from data_loading_preprocessing import load_config, load_data_from_db, clean_data
 from feature_engineering import fix_tuition, engineer_sleep_features, impute_cca, create_failed, standardise_categoricals
 from model_training import train_model
-from predict_and_evaluate import evaluate_model
+from predict_and_evaluate import get_predictions, evaluate_model
 import pandas as pd
 
 def main():
@@ -31,9 +31,14 @@ def main():
         save_path="model.pkl"
     )
 
-    # Step 4: Predict using X_test and 
-    results = evaluate_model(model, X_test, y_test)
-    print(results)
+    # Step 4: Predict y using X_test
+    predict_df = get_predictions(model, X_test, y_test)
+    # Save to .csv
+    predict_df.to_csv('predict_df.csv',index=False)
+    
+    # Step 5: Evaluate the model's performance
+    evaluate = evaluate_model(predict_df)
+    print(evaluate)
     
 if __name__ == "__main__":
     main()
