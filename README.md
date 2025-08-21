@@ -70,8 +70,17 @@ The final dataset has the following features:
 11. failed
 12. sleep_dur
 
-## Modelling Results
+## Pipeline Outputs and Modelling Results
 I used a logistic regression model because I wanted to ensure that the model was interpretable to as many people as possible. 
+
+Using my pipeline will output the following:
+
+1. A dataset, 'predict_df.csv', which contains
+- The predicted y values ('predicted_failed')
+- The actual y values ('actual_failed') so the HOD can see how the predictions compare to the acutal values
+- The X-variables from the test set (X_test), so the HOD has more context by which to be able to evaluate the predicted y values for themselves
+
+2. An array of metrics which evaluate the model's performance, namely accuracy, precision, recall, and a confusion matrix. 
 
 The results of my modelling pipeline is as follows:
 - Accuracy (How accurate the model's predictions is overall) = 94.3%
