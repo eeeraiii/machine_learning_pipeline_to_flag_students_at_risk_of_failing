@@ -85,6 +85,7 @@ Using my pipeline will output the following:
 The results of my modelling pipeline is as follows:
 - Accuracy (How accurate the model's predictions is overall) = 94.3%
 - Precision (Out of all predicted failures, which were actually failures?) = ~86%
+- Recall (Out of all actual failures, which were predicted correctly?) = ~63%
 
 ## What Can We Learn from the Data?
 - Schools can encourage better daily time management among students, to ensure they get adequate  rest (>= 7 hours/day) and enough time to study math >= 5 hours/week
@@ -97,5 +98,4 @@ The results of my modelling pipeline is as follows:
 2. The students’ background information was representative of their lifestyle/environmental factors until the O-Level exam
 
 - Analysis was limited by the data presented to me, which lacks data on factors that are potentially influential on 'failed' (e.g. household income, neighbourhood, amount of after-school enrichment, etc)
-
 - While the use of a logistic regression model translates to better interpretability by School HODs, such models are unable to detect non-linear relationships between dependent and independent variables or between dependent variables.
