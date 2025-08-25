@@ -1,5 +1,7 @@
 # Building a Machine Learning Pipeline to Flag Students at Risk of Failing 
 
+This project was based on the [AIAP® Technical Assessment](https://github.com/aisingapore/AIAP-Technical-Assessment-Past-Years-Series), developed by AI Singapore.
+
 ## Overview
 In this project, I will be posing as an AI Engineer working for the Ministry of Education. 
 
